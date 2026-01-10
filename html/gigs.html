@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigs - Craigslist 2.0</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="mobile-header">
+            <button class="hamburger-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo" style="margin-bottom: 0; font-size: 1.2rem;">
+                Gigs
+            </div>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <a href="index.html" style="display:flex; gap:0.5rem; align-items:center;">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Craigslist <span>2.0</span>
+                </a>
+            </div>
+
+            <nav class="nav-section">
+                <h3>Marketplace</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="housing.html"><i class="fa-solid fa-building-user"></i> Housing</a></li>
+                    <li><a href="forsale.html"><i class="fa-solid fa-tag"></i> For Sale</a></li>
+                    <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="service.html"><i class="fa-solid fa-wrench"></i> Services</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <h3>Community</h3>
+                <ul class="nav-links">
+                    <li><a href="community.html"><i class="fa-solid fa-users"></i> Local Events</a></li>
+                    <li><a href="discussionForums.html"><i class="fa-solid fa-comments"></i> Forums</a></li>
+                    <li><a href="gigs.html" class="active"><i class="fa-solid fa-guitar"></i> Gigs</a></li>
+                    <li><a href="resume.html"><i class="fa-solid fa-file-invoice"></i> Resumes</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <nav class="nav-links">
+                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for labor, talent, crew...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn"><i class="fa-solid fa-filter"></i> Filters</button> 
+                    <a href="post-ad.html"><button class="action-btn primary"><i class="fa-solid fa-bullhorn"></i> Post Gig</button></a>
+                </div>
+            </header>
+
+            <section class="filters-bar">
+                <button class="filter-pill active">All Gigs</button>
+                <button class="filter-pill"><i class="fa-solid fa-hammer"></i> Labor</button>
+                <button class="filter-pill"><i class="fa-solid fa-palette"></i> Creative</button>
+                <button class="filter-pill"><i class="fa-solid fa-calendar-check"></i> Event</button>
+                <button class="filter-pill"><i class="fa-solid fa-microphone"></i> Talent</button>
+                <button class="filter-pill"><i class="fa-solid fa-laptop-code"></i> Computer</button>
+            </section>
+
+            <section>
+                <h2 class="section-title">Latest Gigs & Short-Term Work</h2>
+                
+                <div class="listings-grid">
+                    
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKfm0JJUqNyvWzLtTQv0YeA4KB7hjzG5Y-yQ&s" alt="Event Crew">
+                            <div class="card-badges">
+                                <span class="badge trusted">Urgent</span>
+                            </div>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Event Setup & Teardown</h3>
+                                <span class="card-price">$25/hr</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Convention Center
+                            </div>
+                            <p class="card-desc">Need 5 strong individuals for stage setup this Friday. Meals provided. 8 hour shift guaranteed.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586769852044-692d6e3703f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Delivery">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Same-Day Delivery Driver</h3>
+                                <span class="card-price">$200/day</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Metro Area
+                            </div>
+                            <p class="card-desc">Use your own vehicle (SUV/Van preferred). Delivering flower arrangements for Valentine's Day.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Moving">
+                            <span class="badge" style="background:#f59e0b;">Cash</span>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Help Loading Moving Truck</h3>
+                                <span class="card-price">$30/hr</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Westside
+                            </div>
+                            <p class="card-desc">Need help moving furniture into a U-Haul this Saturday morning. Roughly 4 hours of work.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Photography">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Wedding Photographer (2nd Shooter)</h3>
+                                <span class="card-price">$500</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-camera"></i> Botanical Gardens
+                            </div>
+                            <p class="card-desc">Looking for an experienced second shooter for a wedding next month. Portfolio required.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1574958269340-fa927503f3dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bartender">
+                            <span class="badge" style="background:#8b5cf6;">Tips</span>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Private Party Bartender</h3>
+                                <span class="card-price">$40/hr</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> The Hills
+                            </div>
+                            <p class="card-desc">Mixologist needed for a 50th birthday party. 6pm-11pm. Must have own shaker kit.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1503342394128-c104d54dba01?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Music Video">
+                            <span class="badge" style="background:#10b981;">Casting</span>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Extras for Music Video</h3>
+                                <span class="card-price">$150/flat</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-video"></i> Downtown Studio
+                            </div>
+                            <p class="card-desc">Need 10 extras for a club scene shoot. Wear stylish evening attire. Lunch provided.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <a href="#" class="footer-link">Safety Tips</a>
+                <a href="#" class="footer-link">Prohibited Gigs</a>
+                <a href="#" class="footer-link">Avoid Scams</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <span style="color: var(--success-color); font-weight:600;"><i class="fa-solid fa-check"></i> Verified Poster</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        if(menuBtn && sidebar) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // 2. Dark Mode Logic
+        const darkToggle = document.getElementById('darkToggle');
+        if(darkToggle) {
+            darkToggle.addEventListener('change', () => {
+                if(darkToggle.checked) {
+                    document.body.setAttribute('data-theme', 'dark');
+                } else {
+                    document.body.removeAttribute('data-theme');
+                }
+            });
+        }
+
+        // 3. Heart Animation
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const icon = this.querySelector('i');
+                if(icon.classList.contains('fa-regular')) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                    icon.style.color = '#ef4444';
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                    icon.style.color = 'inherit';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

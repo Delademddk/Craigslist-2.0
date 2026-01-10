@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sale - Craigslist 2.0</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="mobile-header">
+            <button class="hamburger-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo" style="margin-bottom: 0; font-size: 1.2rem;">
+                For Sale
+            </div>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <a href="index.html" style="display:flex; gap:0.5rem; align-items:center;">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Craigslist <span>2.0</span>
+                </a>
+            </div>
+
+            <nav class="nav-section">
+                <h3>Marketplace</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="housing.html"><i class="fa-solid fa-building-user"></i> Housing</a></li>
+                    <li><a href="forsale.html" class="active"><i class="fa-solid fa-tag"></i> For Sale</a></li>
+                    <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="service.html"><i class="fa-solid fa-wrench"></i> Services</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <h3>Community</h3>
+                <ul class="nav-links">
+                    <li><a href="community.html"><i class="fa-solid fa-users"></i> Local Events</a></li>
+                    <li><a href="discussionForums.html"><i class="fa-solid fa-comments"></i> Forums</a></li>
+                    <li><a href="gigs.html"><i class="fa-solid fa-guitar"></i> Gigs</a></li>
+                    <li><a href="resume.html"><i class="fa-solid fa-file-invoice"></i> Resumes</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <nav class="nav-links">
+                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for electronics, cars, furniture...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn"><i class="fa-solid fa-arrow-up-wide-short"></i> Sort</button>
+                    <a href="post-ad.html"><button class="action-btn primary"><i class="fa-solid fa-camera"></i> Sell Item</button></a>
+                </div>
+            </header>
+
+            <section class="filters-bar">
+                <button class="filter-pill active">All Items</button>
+                <button class="filter-pill"><i class="fa-solid fa-laptop"></i> Electronics</button>
+                <button class="filter-pill"><i class="fa-solid fa-couch"></i> Furniture</button>
+                <button class="filter-pill"><i class="fa-solid fa-car"></i> Vehicles</button>
+                <button class="filter-pill"><i class="fa-solid fa-shirt"></i> Clothing</button>
+                <button class="filter-pill"><i class="fa-solid fa-gift"></i> Free Stuff</button>
+            </section>
+
+            <section>
+                <h2 class="section-title">Latest Items for Sale</h2>
+                
+                <div class="listings-grid">
+                    
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.hothardware.com/contentimages/article/3292/content/small_angle-2-apple-macbook-pro-14-m2-pro-2023.jpg" alt="MacBook Pro">
+                            <div class="card-badges">
+                                <span class="badge trusted">Like New</span>
+                            </div>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">MacBook Pro M2 14"</h3>
+                                <span class="card-price">$1,400</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Downtown
+                            </div>
+                            <p class="card-desc">Space Gray, 16GB RAM, 512GB SSD. Barely used, comes with original box and charger.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sofa">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Modern Green Velvet Sofa</h3>
+                                <span class="card-price">$450</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> West Hills
+                            </div>
+                            <p class="card-desc">Comfortable 3-seater velvet sofa. Good condition, moving sale. Buyer must pick up.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Used Car">
+                            <span class="badge" style="background:#f59e0b;">Urgent</span>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">2018 Honda Civic EX</h3>
+                                <span class="card-price">$16,500</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Auto Mall Area
+                            </div>
+                            <p class="card-desc">Reliable daily driver. 45k miles. Clean title, recently serviced, new tires.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mechanical Keyboard">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Custom Mechanical Keyboard</h3>
+                                <span class="card-price">$120</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> University District
+                            </div>
+                            <p class="card-desc">Keychron K2 Wireless. RGB Backlight, Brown Switches. Perfect for typing.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="iPad">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">iPad Air 4th Gen</h3>
+                                <span class="card-price">$350</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Northside
+                            </div>
+                            <p class="card-desc">64GB WiFi, Sky Blue. Screen is flawless, includes case and Apple Pencil 2.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bike">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Road Bike - Specialized</h3>
+                                <span class="card-price">$600</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> City Park
+                            </div>
+                            <p class="card-desc">Allez Sport model. 54cm frame. Recently tuned up. Great for commuting or fitness.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <a href="#" class="footer-link">Safety Tips</a>
+                <a href="#" class="footer-link">Prohibited Items</a>
+                <a href="#" class="footer-link">Product Recalls</a>
+                <a href="#" class="footer-link">Avoid Scams</a>
+                <span style="color: var(--success-color); font-weight:600;"><i class="fa-solid fa-check-double"></i> Verified Seller</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        if(menuBtn && sidebar) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // 2. Dark Mode Logic
+        const darkToggle = document.getElementById('darkToggle');
+        if(darkToggle) {
+            darkToggle.addEventListener('change', () => {
+                if(darkToggle.checked) {
+                    document.body.setAttribute('data-theme', 'dark');
+                } else {
+                    document.body.removeAttribute('data-theme');
+                }
+            });
+        }
+
+        // 3. Heart Animation
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const icon = this.querySelector('i');
+                if(icon.classList.contains('fa-regular')) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                    icon.style.color = '#ef4444';
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                    icon.style.color = 'inherit';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

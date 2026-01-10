@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forums - Craigslist 2.0</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="mobile-header">
+            <button class="hamburger-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo" style="margin-bottom: 0; font-size: 1.2rem;">
+                Forums
+            </div>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <a href="index.html" style="display:flex; gap:0.5rem; align-items:center;">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Craigslist <span>2.0</span>
+                </a>
+            </div>
+
+            <nav class="nav-section">
+                <h3>Marketplace</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="housing.html"><i class="fa-solid fa-building-user"></i> Housing</a></li>
+                    <li><a href="forsale.html"><i class="fa-solid fa-tag"></i> For Sale</a></li>
+                    <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="service.html"><i class="fa-solid fa-wrench"></i> Services</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <h3>Community</h3>
+                <ul class="nav-links">
+                    <li><a href="community.html"><i class="fa-solid fa-users"></i> Local Events</a></li>
+                    <li><a href="discussionForums.html" class="active"><i class="fa-solid fa-comments"></i> Forums</a></li>
+                    <li><a href="gigs.html"><i class="fa-solid fa-guitar"></i> Gigs</a></li>
+                    <li><a href="resume.html"><i class="fa-solid fa-file-invoice"></i> Resumes</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <nav class="nav-links">
+                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search discussions, questions, topics...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn"><i class="fa-regular fa-bell"></i> Subscribe</button>
+                    <button class="action-btn primary"><i class="fa-solid fa-pen-to-square"></i> New Thread</button>
+                </div>
+            </header>
+
+            <section class="filters-bar">
+                <button class="filter-pill active">Trending</button>
+                <button class="filter-pill"><i class="fa-solid fa-fire"></i> Hot Topics</button>
+                <button class="filter-pill"><i class="fa-regular fa-clock"></i> Newest</button>
+                <button class="filter-pill"><i class="fa-solid fa-question"></i> Q&A</button>
+                <button class="filter-pill"><i class="fa-solid fa-comments"></i> General Chat</button>
+                <button class="filter-pill"><i class="fa-solid fa-triangle-exclamation"></i> Rants</button>
+            </section>
+
+            <section>
+                <h2 class="section-title">Active Discussions</h2>
+                
+                <div class="listings-grid">
+                    
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1492551557933-34265f7af79e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Conversation">
+                            <div class="card-badges">
+                                <span class="badge trusted">Pinned</span>
+                            </div>
+                            <button class="fav-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Welcome to the New Community Forum!</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.85rem;">Admin</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-comment-dots"></i> 342 Replies
+                            </div>
+                            <p class="card-desc">Please read the updated rules regarding posting guidelines and civility before starting a new thread.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech">
+                            <span class="badge" style="background:#3b82f6;">Tech</span>
+                            <button class="fav-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Best budget laptop for students in 2026?</h3>
+                                <span class="card-price" style="color:#10b981;">Question</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-comment-dots"></i> 89 Replies
+                            </div>
+                            <p class="card-desc">Looking for something under $600 that can handle coding and light video editing. Thoughts on the new Air?</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://static01.nyt.com/images/2019/01/22/upshot/22up-traffic1/merlin_144908511_f611b394-7ae4-4e80-a860-9442f5b88656-superJumbo.jpg" alt="Traffic">
+                            <span class="badge" style="background:#ef4444;">Rant</span>
+                            <button class="fav-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">The traffic on Main St is unbearable</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.85rem;">Local</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-comment-dots"></i> 156 Replies
+                            </div>
+                            <p class="card-desc">Why has the construction taken 8 months? It's adding 45 mins to my commute every single morning.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/75/12/46/pizza-hut.jpg?w=900&h=500&s=1" alt="Food">
+                            <span class="badge" style="background:#f59e0b;">Food</span>
+                            <button class="fav-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Best pizza spot in downtown?</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.85rem;">Recs</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-comment-dots"></i> 42 Replies
+                            </div>
+                            <p class="card-desc">Trying to find authentic NY style pizza. I've tried Tony's but it was too greasy. Suggestions?</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Technology">
+                            <button class="fav-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">AI is changing the job market fast</h3>
+                                <span class="card-price" style="color:#8b5cf6;">Debate</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-comment-dots"></i> 204 Replies
+                            </div>
+                            <p class="card-desc">Is anyone else worried about automation in creative fields? Let's discuss the pros and cons.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://www.felllawfirm.com/wp-content/uploads/2020/10/What-to-Do-If-Your-Landlord-Wont-Return-Your-Deposit-Fell-Law-Firm-iStock-160589255-1024x683.jpg" alt="Housing">
+                            <span class="badge" style="background:#10b981;">Advice</span>
+                            <button class="fav-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Landlord won't return security deposit</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.85rem;">Legal</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-comment-dots"></i> 76 Replies
+                            </div>
+                            <p class="card-desc">Moved out 2 months ago, apartment was spotless. They are ghosting my calls. What are my rights?</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <a href="#" class="footer-link">Forum Rules</a>
+                <a href="#" class="footer-link">Moderation Policy</a>
+                <a href="#" class="footer-link">Report Content</a>
+                <a href="#" class="footer-link">Contact Admins</a>
+                <span style="color: var(--primary-color); font-weight:600;"><i class="fa-solid fa-comments"></i> Join the Convo</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        if(menuBtn && sidebar) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // 2. Dark Mode Logic
+        const darkToggle = document.getElementById('darkToggle');
+        if(darkToggle) {
+            darkToggle.addEventListener('change', () => {
+                if(darkToggle.checked) {
+                    document.body.setAttribute('data-theme', 'dark');
+                } else {
+                    document.body.removeAttribute('data-theme');
+                }
+            });
+        }
+
+        // 3. Heart/Bookmark Animation
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const icon = this.querySelector('i');
+                // Toggle between regular and solid bookmark icon
+                if(icon.classList.contains('fa-regular')) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                    icon.style.color = '#3b82f6'; // Blue for bookmarked
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                    icon.style.color = 'inherit';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

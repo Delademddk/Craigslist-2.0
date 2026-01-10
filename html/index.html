@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craigslist 2.0 - Accra</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="mobile-header">
+            <button class="hamburger-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo" style="margin-bottom: 0; font-size: 1.2rem;">
+                Craigslist <span>2.0</span>
+            </div>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                Craigslist <span>2.0</span>
+            </div>
+
+            <nav class="nav-section">
+                <h3>Marketplace</h3>
+                <ul class="nav-links">
+                    <li><a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="housing.html"><i class="fa-solid fa-building-user"></i> Housing</a></li>
+                    <li><a href="forsale.html"><i class="fa-solid fa-tag"></i> For Sale</a></li>
+                    <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="service.html"><i class="fa-solid fa-wrench"></i> Services</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <h3>Community</h3>
+                <ul class="nav-links">
+                    <li><a href="community.html"><i class="fa-solid fa-users"></i> Local Events</a></li>
+                    <li><a href="discussionForums.html"><i class="fa-solid fa-comments"></i> Forums</a></li>
+                    <li><a href="gigs.html"><i class="fa-solid fa-guitar"></i> Gigs</a></li>
+                    <li><a href="resume.html"><i class="fa-solid fa-file-invoice"></i> Resumes</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <nav class="nav-links">
+                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for housing, jobs, items...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Saved</button>
+                    <a href="post-ad.html"><button class="action-btn primary"><i class="fa-solid fa-plus"></i> Post Ad</button></a>
+                    
+                </div>
+            </header>
+
+            <section class="filters-bar">
+                <button class="filter-pill active">All</button>
+                <button class="filter-pill"><i class="fa-solid fa-house"></i> Housing</button>
+                <button class="filter-pill"><i class="fa-solid fa-briefcase"></i> Jobs</button>
+                <button class="filter-pill"><i class="fa-solid fa-couch"></i> Furniture</button>
+                <button class="filter-pill"><i class="fa-solid fa-car"></i> Vehicles</button>
+                <button class="filter-pill"><i class="fa-solid fa-laptop"></i> Electronics</button>
+            </section>
+
+            <section>
+                <h2 class="section-title">Recommended for You in Accra</h2>
+                
+                <div class="listings-grid">
+                    
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://cdn11.bigcommerce.com/s-g95xg0y1db/images/stencil/1920w/uploaded_images/image-3-bedroom-house-plan-20910.jpg?t=1718656091" alt="Executive House">
+                            <div class="card-badges">
+                                <span class="badge trusted"><i class="fa-solid fa-check"></i> Trusted</span>
+                            </div>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Executive 3-Bedroom House</h3>
+                                <span class="card-price">₵ 1.2M</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Oyarifa, Accra
+                            </div>
+                            <p class="card-desc">Modern terraced bungalow with gated compound, perfect family home.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Apartment">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Luxury 2BR Apt with Pool</h3>
+                                <span class="card-price">₵ 8,500/mo</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Cantonments, Accra
+                            </div>
+                            <p class="card-desc">Serviced apartment with city views, fast WiFi, and gym access.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Kitchen">
+                            <span class="badge trusted" style="background: #3b82f6;">New</span>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Fully Furnished Flat</h3>
+                                <span class="card-price">₵ 6,200/mo</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> East Legon, Accra
+                            </div>
+                            <p class="card-desc">Sleek open-plan kitchen and living space in a gated community.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vintage Car">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">2020 Toyota Land Cruiser</h3>
+                                <span class="card-price">₵ 450k</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Airport City, Accra
+                            </div>
+                            <p class="card-desc">Excellent condition, low mileage, dealer maintained.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://reapp.com.gh/wp-content/uploads/2021/10/IMG-20220301-WA0005.jpg" alt="Sofa">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Sofa Complete Set Price In Ghana</h3>
+                                <span class="card-price">₵ 4000</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Tesano, Accra
+                            </div>
+                            <p class="card-desc">Excellent condition, very comfortable and last long.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.samsung.com/uk/smartphones/galaxy-s25-ultra/buy/02_Gallery/02-2_KV_With-Exclusive-Color/03_Color_Group_KV_image_MO.jpg" alt="Phones">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Phones Shop</h3>
+                                <span class="card-price">₵ 15k</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Circle, Accra
+                            </div>
+                            <p class="card-desc">Brand new, quality battries, dealer maintained.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Explore Categories</h2>
+                <div class="categories-grid">
+                    
+                    <a href="housing.htm" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Housing" class="cat-img">
+                        <h4>Housing</h4>
+                    </a>
+
+                    <a href="jobs.htm" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jobs" class="cat-img">
+                        <h4>Jobs & Offices</h4>
+                    </a>
+
+                    <a href="forsale.htm" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="For Sale" class="cat-img">
+                        <h4>For Sale</h4>
+                    </a>
+
+                    <a href="community.htm" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community" class="cat-img">
+                        <h4>Community</h4>
+                    </a>
+
+                     <a href="service.htm" class="cat-card">
+                        <img src="https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/8103728/821817_157617.png" alt="Services" class="cat-img">
+                        <h4>Services</h4>
+                    </a>
+
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <a href="#" class="footer-link">Help & FAQ</a>
+                <a href="#" class="footer-link">Safety Tips</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <span style="color: var(--success-color); font-weight:600;"><i class="fa-solid fa-shield-halved"></i> Verified Platform</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        // Toggle sidebar when clicking hamburger
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent immediate closing
+            sidebar.classList.toggle('active');
+        });
+
+        // Close sidebar when clicking anywhere outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992) {
+                if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                    sidebar.classList.remove('active');
+                }
+            }
+        });
+
+        // 2. Dark Mode Logic
+        const darkToggle = document.getElementById('darkToggle');
+        
+        darkToggle.addEventListener('change', () => {
+            if(darkToggle.checked) {
+                document.body.setAttribute('data-theme', 'dark');
+            } else {
+                document.body.removeAttribute('data-theme');
+            }
+        });
+
+        // 3. Simple Heart Animation
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent navigating if inside a link
+                const icon = this.querySelector('i');
+                if(icon.classList.contains('fa-regular')) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                    icon.style.color = '#ef4444';
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                    icon.style.color = 'inherit';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - Craigslist 2.0</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="mobile-header">
+            <button class="hamburger-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo" style="margin-bottom: 0; font-size: 1.2rem;">
+                Jobs
+            </div>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <a href="index.html" style="display:flex; gap:0.5rem; align-items:center;">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Craigslist <span>2.0</span>
+                </a>
+            </div>
+
+            <nav class="nav-section">
+                <h3>Marketplace</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="housing.html"><i class="fa-solid fa-building-user"></i> Housing</a></li>
+                    <li><a href="forsale.html"><i class="fa-solid fa-tag"></i> For Sale</a></li>
+                    <li><a href="jobs.html" class="active"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="service.html"><i class="fa-solid fa-wrench"></i> Services</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <h3>Community</h3>
+                <ul class="nav-links">
+                    <li><a href="community.html"><i class="fa-solid fa-users"></i> Local Events</a></li>
+                    <li><a href="discussionForums.html"><i class="fa-solid fa-comments"></i> Forums</a></li>
+                    <li><a href="gigs.html"><i class="fa-solid fa-guitar"></i> Gigs</a></li>
+                    <li><a href="resume.html"><i class="fa-solid fa-file-invoice"></i> Resumes</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <nav class="nav-links">
+                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for software engineer, marketing, driver...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn"><i class="fa-solid fa-file-arrow-up"></i> Upload Resume</button>
+                    <a href="post-ad.html"><button class="action-btn primary"><i class="fa-solid fa-bullhorn"></i> Post a Job</button></a>
+                </div>
+            </header>
+
+            <section class="filters-bar">
+                <button class="filter-pill active">All Jobs</button>
+                <button class="filter-pill"><i class="fa-solid fa-laptop-house"></i> Remote</button>
+                <button class="filter-pill"><i class="fa-regular fa-clock"></i> Full-Time</button>
+                <button class="filter-pill"><i class="fa-solid fa-hourglass-half"></i> Contract</button>
+                <button class="filter-pill"><i class="fa-solid fa-money-bill-wave"></i> $100k+</button>
+                <button class="filter-pill"><i class="fa-solid fa-graduation-cap"></i> Entry Level</button>
+            </section>
+
+            <section>
+                <h2 class="section-title">Featured Opportunities</h2>
+                
+                <div class="listings-grid">
+                    
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech Office">
+                            <div class="card-badges">
+                                <span class="badge trusted">Hiring</span>
+                            </div>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Senior Full-Stack Developer</h3>
+                                <span class="card-price">$120k+</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-building"></i> TechNova Solutions • Remote
+                            </div>
+                            <p class="card-desc">Join our fast-paced team building next-gen SaaS tools. React, Node.js, and AWS experience required.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Marketing Meeting">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Digital Marketing Manager</h3>
+                                <span class="card-price">$85k/yr</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-building"></i> GrowthEasy Media • Austin, TX
+                            </div>
+                            <p class="card-desc">Lead SEO, PPC, and social campaigns for e-commerce clients. 3+ years agency experience preferred.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://www.procore.com/library/wp-content/uploads/2024/01/The-Role-of-the-Foreman-in-Construction-Procore-Blog-Hero.png" alt="Construction Site">
+                            <span class="badge" style="background:#f59e0b;">Urgent</span>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Site Foreman / Supervisor</h3>
+                                <span class="card-price">$45/hr</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-building"></i> BuildRight Corp • Denver, CO
+                            </div>
+                            <p class="card-desc">Oversee daily operations at commercial construction sites. OSHA certification required.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Customer Support">
+                            <span class="badge" style="background:#8b5cf6;">Remote</span>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Customer Success Specialist</h3>
+                                <span class="card-price">$55k/yr</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-building"></i> HelpDesk.io • Work from Home
+                            </div>
+                            <p class="card-desc">Assist enterprise clients with onboarding and troubleshooting. Flexible hours, full benefits.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://bftraining.ae/wp-content/uploads/2024/11/2.jpg" alt="Graphic Design">
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Senior Graphic Designer</h3>
+                                <span class="card-price">$75k/yr</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-building"></i> Studio Vibes • Seattle, WA
+                            </div>
+                            <p class="card-desc">Create stunning visuals for print and digital media. Expert in Adobe Creative Suite needed.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare">
+                            <span class="badge trusted">Medical</span>
+                            <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Registered Nurse (RN)</h3>
+                                <span class="card-price">$90k+</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-building"></i> City General Hospital • Boston, MA
+                            </div>
+                            <p class="card-desc">ICU Department. Night shift differential available. Signing bonus for qualified candidates.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <a href="#" class="footer-link">Job Seeker Help</a>
+                <a href="#" class="footer-link">Employer Rules</a>
+                <a href="#" class="footer-link">Salary Guide</a>
+                <a href="#" class="footer-link">Privacy & Terms</a>
+                <span style="color: var(--success-color); font-weight:600;"><i class="fa-solid fa-briefcase"></i> EEO Employer</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        if(menuBtn && sidebar) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // 2. Dark Mode Logic
+        const darkToggle = document.getElementById('darkToggle');
+        if(darkToggle) {
+            darkToggle.addEventListener('change', () => {
+                if(darkToggle.checked) {
+                    document.body.setAttribute('data-theme', 'dark');
+                } else {
+                    document.body.removeAttribute('data-theme');
+                }
+            });
+        }
+
+        // 3. Heart Animation
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const icon = this.querySelector('i');
+                if(icon.classList.contains('fa-regular')) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                    icon.style.color = '#ef4444';
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                    icon.style.color = 'inherit';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

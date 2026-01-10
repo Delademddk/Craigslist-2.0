@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Craigslist 2.0</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* --- Page-Specific Styles for Community Page --- */
+        
+        /* This grid creates the "Filters" column next to the "Events" column */
+        .inner-page-grid {
+            display: grid;
+            grid-template-columns: 260px 1fr; /* 260px for Filters, rest for Content */
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Filter Card Styling */
+        .filter-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            position: sticky;
+            top: 2rem; /* Sticks when scrolling */
+            height: fit-content;
+        }
+
+        .filter-group { margin-bottom: 1.25rem; }
+        
+        .filter-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .filter-select, .filter-input {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            background: var(--bg-body);
+            color: var(--text-main);
+        }
+
+        /* Hero Banner */
+        .community-hero {
+            background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: var(--radius-md);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        [data-theme="dark"] .community-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+            border-color: #1e40af;
+        }
+
+        .community-hero h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #1e40af; /* Deep Blue */
+            margin-bottom: 0.75rem;
+        }
+        
+        [data-theme="dark"] .community-hero h1 { color: #dbeafe; }
+
+        .community-hero p {
+            color: #4b5563;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        [data-theme="dark"] .community-hero p { color: #94a3b8; }
+
+        /* Event Cards */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .event-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .event-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .event-content { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+        
+        .event-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .event-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .inner-page-grid { grid-template-columns: 1fr; }
+            .filter-card { position: static; margin-bottom: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="mobile-header">
+            <button class="hamburger-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+            <div class="logo" style="margin-bottom:0; font-size:1.2rem;">Community</div>
+            <div class="user-icon"><i class="fa-regular fa-user"></i></div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <a href="index.html" style="display:flex; gap:0.5rem; align-items:center;">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Craigslist <span>2.0</span>
+                </a>
+            </div>
+
+            <nav class="nav-section">
+                <h3>Marketplace</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="housing.html"><i class="fa-solid fa-building-user"></i> Housing</a></li>
+                    <li><a href="forsale.html"><i class="fa-solid fa-tag"></i> For Sale</a></li>
+                    <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="service.html"><i class="fa-solid fa-wrench"></i> Services</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <h3>Community</h3>
+                <ul class="nav-links">
+                    <li><a href="community.html" class="active"><i class="fa-solid fa-users"></i> Local Events</a></li>
+                    <li><a href="discussionForums.html"><i class="fa-solid fa-comments"></i> Forums</a></li>
+                    <li><a href="gigs.html"><i class="fa-solid fa-guitar"></i> Gigs</a></li>
+                    <li><a href="resume.html"><i class="fa-solid fa-file-invoice"></i> Resumes</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search events, groups, notices...">
+                </div>
+                
+                <div class="header-actions">
+                    <a href="post-ad.html">
+                        <button class="action-btn primary" onclick="window.location.href='post-ad.htm'">
+                        <i class="fa-solid fa-plus"></i> Post Ad
+                        </button>
+                    </a>
+                    <button class="action-btn"><i class="fa-regular fa-user"></i> Account</button>
+                </div>
+            </header>
+
+            <div class="inner-page-grid">
+                
+                <aside class="filter-card">
+                    <h3 style="margin-bottom:1.5rem; font-size:1.1rem;">Filters</h3>
+                    
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <select class="filter-select">
+                            <option>All Events</option>
+                            <option>Festivals</option>
+                            <option>Meetups</option>
+                            <option>Sports</option>
+                            <option>Classes</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Location</label>
+                        <input type="text" class="filter-input" placeholder="City or Neighborhood">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Date</label>
+                        <select class="filter-select">
+                            <option>Any Date</option>
+                            <option>Today</option>
+                            <option>This Weekend</option>
+                        </select>
+                    </div>
+
+                    <button class="action-btn primary" style="width:100%; justify-content:center; margin-top:1rem;">Apply</button>
+                </aside>
+
+                <section>
+                    <div class="community-hero">
+                        <h1>Join the Conversation</h1>
+                        <p>Discover local events, meet new people, find groups, and help neighbors with lost & found notices.</p>
+                    </div>
+
+                    <h2 class="section-title">Community Highlights</h2>
+
+                    <div class="events-grid">
+                        
+                        <article class="event-card">
+                            <img src="https://eyalitours.com/wp-content/uploads/2019/06/wote-v.jpg" alt="Street Festival" class="event-img">
+                            <div class="event-content">
+                                <h3 class="event-title">Accra Street Festival</h3>
+                                <div class="event-date"><i class="fa-regular fa-calendar"></i> Jan 15, 2026 • Jamestown</div>
+                                <p class="event-desc">Join the lively celebration with music, food, art, and community spirit.</p>
+                                <button class="action-btn" style="width:fit-content">View Details</button>
+                            </div>
+                        </article>
+
+                        <article class="event-card">
+                            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community Meetup" class="event-img">
+                            <div class="event-content">
+                                <h3 class="event-title">Akwaaba Welcome Event</h3>
+                                <div class="event-date"><i class="fa-regular fa-calendar"></i> Feb 8, 2026 • Accra</div>
+                                <p class="event-desc">Cultural showcase with performances, food stalls, and friendly meetups.</p>
+                                <button class="action-btn" style="width:fit-content">View Details</button>
+                            </div>
+                        </article>
+
+                        <article class="event-card">
+                            <img src="https://cdn.bestbrains.com/blog/hsnbc/hsnbc-01.jpg" alt="Book Club" class="event-img">
+                            <div class="event-content">
+                                <h3 class="event-title">Neighborhood Book Club</h3>
+                                <div class="event-date"><i class="fa-regular fa-clock"></i> Every Wed • East Legon</div>
+                                <p class="event-desc">Casual outdoor meetups to discuss books and make new friends.</p>
+                                <button class="action-btn" style="width:fit-content">Join Group</button>
+                            </div>
+                        </article>
+
+                        <article class="event-card">
+                            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Yoga Class" class="event-img">
+                            <div class="event-content">
+                                <h3 class="event-title">Sunset Yoga</h3>
+                                <div class="event-date"><i class="fa-regular fa-calendar"></i> Tuesdays • River Park</div>
+                                <p class="event-desc">Relaxing flow yoga for all levels. Bring your own mat.</p>
+                                <button class="action-btn" style="width:fit-content">View Details</button>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        if(menuBtn && sidebar) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('active');
+            });
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // 2. Dark Mode Logic
+        const darkToggle = document.getElementById('darkToggle');
+        if(darkToggle) {
+            if(localStorage.getItem('theme') === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                darkToggle.checked = true;
+            }
+            darkToggle.addEventListener('change', () => {
+                if(darkToggle.checked) {
+                    document.body.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

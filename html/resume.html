@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumes - Craigslist 2.0</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="mobile-header">
+            <button class="hamburger-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo" style="margin-bottom: 0; font-size: 1.2rem;">
+                Resumes
+            </div>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <a href="index.html" style="display:flex; gap:0.5rem; align-items:center;">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Craigslist <span>2.0</span>
+                </a>
+            </div>
+
+            <nav class="nav-section">
+                <h3>Marketplace</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="housing.html"><i class="fa-solid fa-building-user"></i> Housing</a></li>
+                    <li><a href="forsale.html"><i class="fa-solid fa-tag"></i> For Sale</a></li>
+                    <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="service.html"><i class="fa-solid fa-wrench"></i> Services</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <h3>Community</h3>
+                <ul class="nav-links">
+                    <li><a href="community.html"><i class="fa-solid fa-users"></i> Local Events</a></li>
+                    <li><a href="discussionForums.html"><i class="fa-solid fa-comments"></i> Forums</a></li>
+                    <li><a href="gigs.html"><i class="fa-solid fa-guitar"></i> Gigs</a></li>
+                    <li><a href="resume.html" class="active"><i class="fa-solid fa-file-invoice"></i> Resumes</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <nav class="nav-links">
+                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for skills (e.g. Java, Nursing, Sales)...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn"><i class="fa-solid fa-eye"></i> View My Profile</button>
+                    <a href="post-ad.html"><button class="action-btn primary"><i class="fa-solid fa-upload"></i> Post Resume</button></a>
+                </div>
+            </header>
+
+            <section class="filters-bar">
+                <button class="filter-pill active">All Candidates</button>
+                <button class="filter-pill"><i class="fa-solid fa-code"></i> Tech/IT</button>
+                <button class="filter-pill"><i class="fa-solid fa-briefcase-medical"></i> Healthcare</button>
+                <button class="filter-pill"><i class="fa-solid fa-bullseye"></i> Sales</button>
+                <button class="filter-pill"><i class="fa-solid fa-graduation-cap"></i> Graduates</button>
+                <button class="filter-pill"><i class="fa-solid fa-clock"></i> Available Now</button>
+            </section>
+
+            <section>
+                <h2 class="section-title">Talented Candidates in Your Area</h2>
+                
+                <div class="listings-grid">
+                    
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Man">
+                            <div class="card-badges">
+                                <span class="badge trusted">MBA</span>
+                            </div>
+                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Senior Project Manager</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.9rem;">Available</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-briefcase"></i> 10 Years Exp • Downtown
+                            </div>
+                            <p class="card-desc">Certified PMP with extensive experience in Agile methodologies and team leadership.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Woman">
+                            <span class="badge" style="background:#3b82f6;">Remote</span>
+                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">UX/UI Designer</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.9rem;">Portfolio Ready</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-laptop"></i> Figma Expert • Remote
+                            </div>
+                            <p class="card-desc">Specializing in mobile app design and user research. Seeking contract or full-time roles.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Man">
+                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Administrative Assistant</h3>
+                                <span class="card-price" style="color:#10b981;">Entry Level</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-file-pen"></i> Highly Organized • Westside
+                            </div>
+                            <p class="card-desc">Recent graduate with strong communication skills and proficiency in Microsoft Office Suite.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Woman">
+                            <span class="badge" style="background:#f59e0b;">Nursing</span>
+                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Registered Nurse (RN)</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.9rem;">Night Shift</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-user-nurse"></i> ACLS Cert • Citywide
+                            </div>
+                            <p class="card-desc">Compassionate caregiver with 4 years of ICU experience. Available for travel nursing.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Man">
+                            <div class="card-badges">
+                                <span class="badge trusted">Degree</span>
+                            </div>
+                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Full Stack Developer</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.9rem;">Freelance</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-code"></i> Python/React • North Hills
+                            </div>
+                            <p class="card-desc">Building scalable web applications. Open to short-term gigs or long-term contracts.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Woman">
+                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Marketing Specialist</h3>
+                                <span class="card-price" style="color:var(--text-muted); font-size:0.9rem;">Seeking Full-time</span>
+                            </div>
+                            <div class="card-location">
+                                <i class="fa-solid fa-chart-line"></i> SEO/Social • Midtown
+                            </div>
+                            <p class="card-desc">Creative marketer with a track record of increasing engagement and brand awareness.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <a href="#" class="footer-link">Resume Tips</a>
+                <a href="#" class="footer-link">Job Seeker FAQ</a>
+                <a href="#" class="footer-link">Privacy Settings</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <span style="color: var(--success-color); font-weight:600;"><i class="fa-solid fa-user-check"></i> Talent Network</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        if(menuBtn && sidebar) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // 2. Dark Mode Logic
+        const darkToggle = document.getElementById('darkToggle');
+        if(darkToggle) {
+            darkToggle.addEventListener('change', () => {
+                if(darkToggle.checked) {
+                    document.body.setAttribute('data-theme', 'dark');
+                } else {
+                    document.body.removeAttribute('data-theme');
+                }
+            });
+        }
+
+        // 3. Heart/Star Animation
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const icon = this.querySelector('i');
+                // Toggle between regular and solid star/heart
+                if(icon.classList.contains('fa-regular')) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                    icon.style.color = '#f59e0b'; // Gold for saved resume
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                    icon.style.color = 'inherit';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

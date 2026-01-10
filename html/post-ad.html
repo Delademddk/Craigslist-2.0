@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Ad - Craigslist 2.0</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="mobile-header">
+            <button class="hamburger-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo" style="margin-bottom: 0; font-size: 1.2rem;">
+                Post Ad
+            </div>
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <a href="index.html" style="display:flex; gap:0.5rem; align-items:center;">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Craigslist <span>2.0</span>
+                </a>
+            </div>
+
+            <nav class="nav-section">
+                <h3>Marketplace</h3>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="housing.html"><i class="fa-solid fa-building-user"></i> Housing</a></li>
+                    <li><a href="forsale.html"><i class="fa-solid fa-tag"></i> For Sale</a></li>
+                    <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="service.html"><i class="fa-solid fa-wrench"></i> Services</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <h3>Community</h3>
+                <ul class="nav-links">
+                    <li><a href="community.html"><i class="fa-solid fa-users"></i> Local Events</a></li>
+                    <li><a href="discussionForums.html"><i class="fa-solid fa-comments"></i> Forums</a></li>
+                    <li><a href="gigs.html"><i class="fa-solid fa-guitar"></i> Gigs</a></li>
+                    <li><a href="resume.html"><i class="fa-solid fa-file-invoice"></i> Resumes</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <nav class="nav-links">
+                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header" style="justify-content: flex-start; gap: 1rem;">
+                <button onclick="window.history.back()" class="action-btn" style="border:none; padding-left:0;">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+                <h1 style="font-size: 1.5rem; font-weight: 700;">Create New Listing</h1>
+            </header>
+
+            <div class="form-container">
+                <form class="post-ad-form">
+                    
+                    <div class="form-section">
+                        <h2 class="form-title">Ad Details</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Posting Title</label>
+                                <input type="text" placeholder="e.g. 2018 MacBook Pro - Excellent Condition">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Category</label>
+                                <div class="custom-select">
+                                    <select>
+                                        <option>Select Category...</option>
+                                        <option>Housing</option>
+                                        <option>For Sale</option>
+                                        <option>Jobs</option>
+                                        <option>Services</option>
+                                        <option>Community</option>
+                                        <option>Gigs</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Sub-Category</label>
+                                <div class="custom-select">
+                                    <select>
+                                        <option>Select...</option>
+                                        <option>Electronics</option>
+                                        <option>Furniture</option>
+                                        <option>Cars/Trucks</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="number" placeholder="$ 0.00">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Condition</label>
+                                <div class="custom-select">
+                                    <select>
+                                        <option>New</option>
+                                        <option>Like New</option>
+                                        <option>Good</option>
+                                        <option>Fair</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="form-title">Photos</h2>
+                        <div class="upload-zone">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <p>Drag & drop photos here or <span>Browse</span></p>
+                            <small>Supports JPG, PNG (Max 5MB)</small>
+                            <input type="file" multiple hidden>
+                        </div>
+                        <div class="preview-grid"></div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="form-title">Description</h2>
+                        <div class="form-group full-width">
+                            <textarea rows="8" placeholder="Describe your item, service, or job in detail..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="form-title">Location & Contact</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>City / Neighborhood</label>
+                                <input type="text" placeholder="e.g. Downtown">
+                            </div>
+                            <div class="form-group">
+                                <label>Postal Code</label>
+                                <input type="text" placeholder="12345">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" value="user@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone (Optional)</label>
+                                <input type="tel" placeholder="(555) 555-5555">
+                            </div>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="location-mask">
+                            <label for="location-mask">Hide my exact location on the map</label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="action-btn" onclick="window.history.back()">Cancel</button>
+                        <button type="button" class="action-btn primary large">Publish Now</button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        if(menuBtn && sidebar) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // 2. Dark Mode Logic
+        const darkToggle = document.getElementById('darkToggle');
+        if(darkToggle) {
+            darkToggle.addEventListener('change', () => {
+                if(darkToggle.checked) {
+                    document.body.setAttribute('data-theme', 'dark');
+                } else {
+                    document.body.removeAttribute('data-theme');
+                }
+            });
+        }
+
+        // 3. Simple Visual Drag-and-Drop Effect
+        const uploadZone = document.querySelector('.upload-zone');
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.style.borderColor = 'var(--primary-color)';
+            uploadZone.style.background = 'rgba(59, 130, 246, 0.05)';
+        });
+        uploadZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            uploadZone.style.borderColor = 'var(--border-color)';
+            uploadZone.style.background = 'transparent';
+        });
+    </script>
+</body>
+</html>
